@@ -6,7 +6,7 @@ import Cart from "../Cart/CartController";
 const Header = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="static" style={{ backgroundColor: "#d35400" }}>
                 <Toolbar>
                     <Typography
                         variant="h6"
