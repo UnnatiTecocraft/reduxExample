@@ -12,7 +12,11 @@ const renderGridTiles = (products = []) => {
 
 const ProductGrid = ({ products = [] }) => {
     return products.length > 0 ? (
-        <Grid container item xs={10} className="grid_center">
+        <Grid
+            container
+            item
+            xs={10}
+            style={{ margin: "auto", marginTop: "30px" }}>
             {renderGridTiles(products)}
         </Grid>
     ) : null;

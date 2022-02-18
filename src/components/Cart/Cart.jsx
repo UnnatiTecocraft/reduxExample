@@ -21,7 +21,14 @@ const Cart = ({
                 aria-haspopup="true"
                 onClick={onOpenCart}
                 color="inherit">
-                <Badge badgeContent={products.length} color="secondary">
+                <Badge
+                    badgeContent={products.length}
+                    sx={{
+                        "& .MuiBadge-badge": {
+                            color: "white",
+                            backgroundColor: "#16a085",
+                        },
+                    }}>
                     <ShoppingCart />
                 </Badge>
             </Button>
@@ -33,7 +40,7 @@ const Cart = ({
                     open={isCartOpen}
                     onClose={onCloseCart}>
                     {products.map((product) => (
-                        <MenuItem key={product.id}>
+                        <MenuItem key={product.id} style={{ width: "600px" }}>
                             <ListItemAvatar>
                                 <Avatar
                                     variant="rounded"

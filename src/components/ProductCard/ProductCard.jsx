@@ -4,7 +4,9 @@ import { Typography, Card, CardContent, CardActions, Button, Avatar} from "@mui/
 
 const ProductCard = ({ product = null, onAddToCart = () => {} }) => {
     return (
-        <Card className="card" style={{ height: 400 }}>
+        <Card
+            className="card"
+            style={{ height: 400, margin: "2px", boxShadow: "none" }}>
             <CardContent>
                 <Avatar
                     alt={product.name}
@@ -15,6 +17,7 @@ const ProductCard = ({ product = null, onAddToCart = () => {} }) => {
                         height: 200,
                         margin: "auto",
                         width: 200,
+                        borderRadius: 0,
                     }}
                 />
                 <Typography
@@ -36,7 +39,8 @@ const ProductCard = ({ product = null, onAddToCart = () => {} }) => {
                     size="small"
                     color="primary"
                     variant="contained"
-                    onClick={onAddToCart}>
+                    onClick={onAddToCart}
+                    style={{ backgroundColor: "#d35400" }}>
                     Add to Cart
                 </Button>
                 <Button
