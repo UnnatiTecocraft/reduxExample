@@ -5,7 +5,7 @@ import Home from "./Home";
 const Main = () => {
     return (
         <Routes>
-            <Route path="/" element={<Home />}></Route>
+            <Route path="/reduxExample" element={<Home />}></Route>
         </Routes>
     );
 };
